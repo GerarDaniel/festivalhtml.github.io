@@ -1,0 +1,16 @@
+@use 'base/variables' as s;
+
+
+
+
+
+.site-footer {
+    background-color: s.$rosa;
+    padding: 2rem;
+    text-align: center;
+
+    span {
+        font-size: 2rem;
+        color: s.$blanco;
+    }
+}

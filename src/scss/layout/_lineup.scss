@@ -1,0 +1,79 @@
+@use 'base/variables' as s;
+@use 'base/mixins' as x;
+
+
+
+.lineup {
+    background-color: s.$rosa;
+    padding: 5rem 0;
+    
+h3,h4,h5 {
+    text-align: center;
+    color: s.$blanco;
+
+    }
+    .dia{
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+}
+
+.escenarios-contenedor{
+    @include x.tablet {
+        @include x.grid(2, 5rem);
+    }
+    h5 {
+        color:#000;
+    }
+    .nombre-escenario {
+        &:after {
+            content:'';
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 2rem auto 0 auto;   
+        }
+    }
+}
+
+.edm .nombre-escenario::after {
+    background-image: url(../img/icono_edm.png);
+}
+
+.rock .nombre-escenario::after {
+    background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+    @include x.resetear-lista;
+     
+    li {
+        padding-top: 2.5rem;
+        font-weight: 700;
+    }
+    span {
+         font-weight: 400;
+    }
+}
+
+.bg-verde {
+    background-color: s.$verde;
+    li:nth-child(odd){
+        background-color: darken(#4cb, 12%);
+    }
+}
+
+.bg-amarillo{
+    background-color: s.$amarillo;
+    li:nth-child(odd){
+        background-color: darken(#fef46b, 12%);
+    }
+}
+
+
+
+
+
